@@ -9,13 +9,21 @@
 
 <body>
     <div id="root">
-        {% comment %} <h1>Hello World!</h1> {% endcomment %}
-   <script>
-        const h1 = document.createElement("h1");
-        h1.innerHTML = "Hello World!"
-        const root = document.getElementById("root");
-        root.appendChild(h1);
-</script> 
+        <!-- <h1>Hello World!</h1> -->
+        <!-- <script>
+            const h1 = document.createElement("h1");
+            h1.innerHTML = "Hello World! from JS"
+            const root = document.getElementById("root");
+            root.appendChild(h1);
+        </script> -->
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script>
+            const h1 = React.createElement("h1", {}, "Hello World from React!");
+            const root = ReactDOM.createRoot(document.getElementById("root")); // to create root we use reactdom
+            root.render(h1); 
+        </script>
     </div>
 </body>
+
 </html>
