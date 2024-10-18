@@ -22,13 +22,21 @@ const jsxheading = <h1 className="heading">Namaste React using JSX</h1>;
 // Now what heading has is exactly same as jsx heading
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+const NormalFunctionComponent = function() {
+    return <h1>Normal Fucntion component</h1>
+}
+
 const HeadingComponent = () => {
-    return <h1 id="heading"> Namaste react in Functional component with return</h1>;
+    return <h1 id="heading1"> Namaste react in Functional component with return</h1>;
 };
+
+// component composition
 
 const HeadingComponent2 = () => (
     <div id="container">
+        <HeadingComponent/>
         <h1 id="heading"> Namaste react in Functional component without return</h1>
+        <NormalFunctionComponent/>
     </div>
 );
 
