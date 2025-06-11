@@ -30,11 +30,42 @@ const HeadingComponent = () => {
     return <h1 id="heading1"> Namaste react in Functional component with return</h1>;
 };
 
+// adding react element into component
+const ele = <span>React element</span>;
+
+// const title = (
+//     <h1 className="head" tabIndex="5">
+//         {ele}
+//         Namaste React using JSX
+//     </h1>
+// );
+
+const Title = () => (
+    <h1 className="head" tabIndex="5">
+        {ele}
+        Namaste React using JSX
+    </h1>
+);
+
+// the below are the ways that we can call a functional component in another component
+
+
 // component composition
+// adding a js variable into component
+// you can write any javascrpt code inside curly braces in JSX.
+// const HeadingComponent2 = () => (
+//     <div id="container">
+//         <HeadingComponent/>
+//         <Title></Title>
+//         <h1 id="heading"> Namaste react in Functional component without return</h1>
+//         <NormalFunctionComponent/>
+//     </div>
+// );
 
 const HeadingComponent2 = () => (
     <div id="container">
         <HeadingComponent/>
+        {Title()}
         <h1 id="heading"> Namaste react in Functional component without return</h1>
         <NormalFunctionComponent/>
     </div>
