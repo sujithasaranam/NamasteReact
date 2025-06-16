@@ -10,7 +10,9 @@ const heading = React.createElement("h1", { id: "heading" }, "Namaste React");
 *Body
 - Search
 - RestaurantContainer
--RestaurantCard
+    - RestaurantCard
+        - Img
+        - Name of the Res, Star Rating, Cuisines
 *Footer
 - Copyright
 - Links
@@ -38,10 +40,50 @@ const Header = () => {
     );
 };
 
+const styleCard = {
+    backgroundColor: "#f0f0f0",
+
+};
+
+const RestaurantCard = () => {
+    return (
+        <div className="res-card" style={styleCard}>
+            <img className="res-logo" alt="res-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/11/24/742d1090-d42e-4928-89d3-014ff3cb497c_996964.jpg"></img>
+            <h3>Meghana Foods</h3>
+            <h4>Biryani, South Indian</h4>
+            <h4>4.4 Stars</h4>
+            <h4>38 minutes</h4>
+        </div>
+    );
+};
+
+const Body = () => {
+    return (
+        <div className="body">
+            <div className="search">Search</div>
+            <div className="res-container">
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+            </div> 
+        </div>
+    );
+};
+
 const AppLayout = () => {
     return (
         <div className="app">
             <Header/>
+            <Body />
         </div>
     );
 };
