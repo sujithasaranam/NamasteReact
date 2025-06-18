@@ -1,4 +1,4 @@
-/*
+
 *Header
 - Logo
 - Nav Header
@@ -13,4 +13,3 @@
 - Links
 - Address
 - Contact
- */
