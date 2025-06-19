@@ -1,6 +1,6 @@
 
 
-const resCardData = [
+let resCardData = [
   {
     "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
     info: {
