@@ -36,16 +36,11 @@
     border: 1px solid black;
 }
 
-.search { 
-    padding: 10px;
-}
-
 .res-logo {
    width: 100%;
 }
 
 .filter-btn {
-    margin: 10px;
     cursor: pointer;
 }
 
@@ -55,4 +50,9 @@
     width: 200px;
     height: 400px;
     background-color: gainsboro;
+}
+
+.filter {
+    margin: 10px;
+    display: flex;
 }
