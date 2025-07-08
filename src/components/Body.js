@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // not sending keys is not acceptable <<< using index <<<< using unique ids as keys
 const Body = () => {
@@ -15,7 +16,7 @@ const Body = () => {
  }, []);
 
 const fetchData = async() => {
-  const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8270232&lng=80.240321&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+  const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9712343&lng=80.2363137&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
   const json = await data.json();
   // console.log(json)
   // console.log(json.data.cards[3].card.card.gridElements.infoWithStyle.restaurants);
@@ -41,7 +42,7 @@ const fetchData = async() => {
       </div>
       <div className="res-container">
         {
-            filteredRestaurants.map(restaurant => <RestaurantCard key={restaurant.info.id} resData={restaurant} />)
+            filteredRestaurants.map(restaurant => <Link to={"/restaurants/"+ restaurant.info.id}><RestaurantCard key={restaurant.info.id} resData={restaurant} /></Link>)
         }
       </div>
     </div>
