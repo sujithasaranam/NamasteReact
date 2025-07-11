@@ -56,3 +56,8 @@
     margin: 10px;
     display: flex;
 }
+
+.user-card {
+    padding: auto;
+    border: 1px solid black;
+}
